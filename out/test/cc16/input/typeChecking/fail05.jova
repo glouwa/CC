@@ -1,0 +1,28 @@
+class Test{
+	
+	private int fail1(){
+		return "ha you failed";
+	}
+	
+	private bool fail2(){
+		return "ha you failed";
+	}	
+	
+	private String fail3(){
+		return 0;
+	}
+	
+	private Test fail4(){
+		return 42;
+	}
+	
+	private int fail5(){
+		String failstring;
+		failstring = "another fail";
+		return failstring;
+	}
+	
+	private bool fail6(){
+		return nix;
+	}
+}

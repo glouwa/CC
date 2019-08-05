@@ -1,0 +1,12 @@
+
+Number of lexical errors: 0
+
+Number of syntax errors: 0
+
+Number of type errors: 6
+  #1: Incompatible type 'String' for return (line 4)
+  #2: Incompatible type 'String' for return (line 8)
+  #3: Incompatible type 'int' for return (line 12)
+  #4: Incompatible type 'int' for return (line 16)
+  #5: Incompatible type 'String' for return (line 22)
+  #6: Incompatible type 'nix' for return (line 26)

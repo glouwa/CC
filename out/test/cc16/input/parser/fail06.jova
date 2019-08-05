@@ -1,0 +1,25 @@
+class Test8
+{
+  int a,b,c,d,e;
+  
+  public int getA()
+  {
+    return a;
+  }
+
+class Main {
+public int main()
+{
+  while()
+  {
+    a = 3;
+  }
+  
+  while(while())
+    b = 42;
+
+  while(print("%d\n", b))
+    
+  return b;
+}
+}

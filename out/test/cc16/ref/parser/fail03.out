@@ -1,0 +1,18 @@
+
+Number of lexical errors: 0
+
+1: KEY_CLASS CLASS_TYPE
+2: '{'
+3: AMOD PRIMITIVE_TYPE ID '(' PRIMITIVE_TYPE ID ',' PRIMITIVE_TYPE ID ')' '{'
+4: PRIMITIVE_TYPE ID ';'
+5: PRIMITIVE_TYPE ID ';' ID ',' ID ';'
+6: KEY_RETURN ID ';'
+7: '}'
+9: PRIMITIVE_TYPE ID '(' ')' '{'
+10: KEY_RETURN ID '(' ID ',' ID ')' ';'
+11: '}'
+12: '}'
+Number of syntax errors: 3
+  #1: line 5:10 mismatched input ',' expecting '='
+  #2: line 9:1 extraneous input 'int' expecting {'}', AMOD}
+  #3: line 12:1 extraneous input '}' expecting {<EOF>, 'class'}

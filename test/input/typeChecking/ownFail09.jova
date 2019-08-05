@@ -1,0 +1,18 @@
+class Obj{
+}
+
+class Test1 {
+
+	private int foo(){
+
+	    int i1, i2;
+	    String s1, s2;
+	    bool b1, b2;
+	    Obj o1, o2;
+
+        o1 = !o2;
+        if (!o2) {}
+        while (!o2) {}
+		return !o2;
+	}
+}

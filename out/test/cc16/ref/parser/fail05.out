@@ -1,0 +1,13 @@
+
+Number of lexical errors: 0
+
+1: KEY_CLASS CLASS_TYPE '{'
+2: AMOD PRIMITIVE_TYPE ID '(' ')' '{'
+3: ID ASSIGN INT INT INT ';'
+4: ID ASSIGN INT INT ';'
+5: KEY_RETURN ID ';'
+6: '}'
+7: '}'
+Number of syntax errors: 2
+  #1: line 3:11 mismatched input '0' expecting {';', RELOP, MULOP, '&&', '||', SIGN}
+  #2: line 4:9 extraneous input '198' expecting {';', RELOP, MULOP, '&&', '||', SIGN}

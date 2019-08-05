@@ -1,0 +1,29 @@
+class Coercions {
+
+  public bool testCoercions(int foo, bool bar, int baz)
+  {
+    int foobar, foobaz;
+    bool barz, braz;
+    
+    foobar = 42;
+    foobaz = 24;
+    
+    barz = true;
+    braz = false;   
+    
+    foobar = foo || baz;
+    
+    braz = bar + barz;
+    
+    return 42;
+  }
+}
+
+class Main {
+  public int main()
+  {
+    Coercions c;
+    c = new Coercions;
+    return c.testCoercions(42, false, 24);
+  }
+}

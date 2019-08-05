@@ -1,0 +1,31 @@
+class MMMGirdle {
+  private int mermaid_man, barnacle_boy;
+  public String sentence;
+  
+  public bool magnify(bool wumbo)
+  {
+    bool result;
+  
+    if(wumbo)
+    {
+      result = true;
+    } else 
+    {
+      result = false;
+    }  
+    return result;
+  }
+}
+
+
+class Main {
+  public int main()
+  {
+    MMMGirdle girdle;
+    int ret;
+    
+    girdle = new MMMGirdle;
+    girdle.sentence = "...set it to W for WUMBO!\n";
+    return girdle.magnify(true);
+  }
+}

@@ -1,0 +1,145 @@
+
+Number of lexical errors: 0
+
+Number of syntax errors: 0
+
+Number of type errors: 0
+
+Number of type warnings: 24
+  #1: int coerced to bool (line 54)
+  #2: int coerced to bool (line 54)
+  #3: int coerced to bool (line 55)
+  #4: int coerced to bool (line 55)
+  #5: bool coerced to int (line 57)
+  #6: bool coerced to int (line 57)
+  #7: bool coerced to int (line 58)
+  #8: bool coerced to int (line 58)
+  #9: bool coerced to int (line 59)
+  #10: bool coerced to int (line 59)
+  #11: bool coerced to int (line 60)
+  #12: bool coerced to int (line 60)
+  #13: bool coerced to int (line 61)
+  #14: bool coerced to int (line 61)
+  #15: bool coerced to int (line 63)
+  #16: bool coerced to int (line 63)
+  #17: bool coerced to int (line 64)
+  #18: bool coerced to int (line 64)
+  #19: bool coerced to int (line 65)
+  #20: bool coerced to int (line 65)
+  #21: bool coerced to int (line 66)
+  #22: bool coerced to int (line 66)
+  #23: bool coerced to int (line 68)
+  #24: bool coerced to int (line 69)
+
+--------------------------------------------------------------------------------
+ID                  |type      |scope                                      |line
+--------------------------------------------------------------------------------
+foo                 |int       |Nested.nestedIsland()                      |12  
+i1                  |int       |Nested.foo()                               |23  
+i2                  |int       |Nested.foo()                               |23  
+s1                  |String    |Nested.foo()                               |24  
+s2                  |String    |Nested.foo()                               |24  
+b1                  |bool      |Nested.foo()                               |25  
+b2                  |bool      |Nested.foo()                               |25  
+o1                  |Obj       |Nested.foo()                               |26  
+o2                  |Obj       |Nested.foo()                               |26  
+
+--------------------------------------------------------------------------------
+OP    |lhs       |rhs       |result    |line|OP-string                   
+--------------------------------------------------------------------------------
+return|int       |int       |int       |7   |return 42                   
+*     |int       |int       |int       |14  |8*15                        
+-     |int       |int       |int       |14  |16-23                       
+*     |int       |int       |int       |14  |8*15*(16-23)                
+/     |int       |int       |int       |14  |8*15*(16-23)/fortyTwo()     
++     |int       |int       |int       |14  |4+8*15*(16-23)/fortyTwo()   
+=     |int       |int       |int       |14  |foo=4+8*15*(16-23)/fortyTwo()
+*     |int       |int       |int       |15  |8*15                        
+-     |int       |int       |int       |15  |16-23                       
+*     |int       |int       |int       |15  |8*15*(16-23)                
+/     |int       |int       |int       |15  |8*15*(16-23)/fortyTwo()     
++     |int       |int       |int       |15  |4+8*15*(16-23)/fortyTwo()   
+<     |int       |int       |bool      |15  |4+8*15*(16-23)/fortyTwo()<0 
+cond  |          |bool      |bool      |15  |4+8*15*(16-23)/fortyTwo()<0 
+*     |int       |int       |int       |16  |8*15                        
+-     |int       |int       |int       |16  |16-23                       
+*     |int       |int       |int       |16  |8*15*(16-23)                
+/     |int       |int       |int       |16  |8*15*(16-23)/fortyTwo()     
++     |int       |int       |int       |16  |4+8*15*(16-23)/fortyTwo()   
+<     |int       |int       |bool      |16  |4+8*15*(16-23)/fortyTwo()<0 
+cond  |          |bool      |bool      |16  |4+8*15*(16-23)/fortyTwo()<0 
+*     |int       |int       |int       |18  |8*15                        
+-     |int       |int       |int       |18  |16-23                       
+*     |int       |int       |int       |18  |8*15*(16-23)                
+/     |int       |int       |int       |18  |8*15*(16-23)/fortyTwo()     
++     |int       |int       |int       |18  |4+8*15*(16-23)/fortyTwo()   
+return|int       |int       |int       |18  |return 4+8*15*(16-23)/fortyTwo()
+&&    |bool      |bool      |bool      |28  |b1&&b2                      
+=     |bool      |bool      |bool      |28  |b1=b1&&b2                   
+||    |bool      |bool      |bool      |29  |b1||b2                      
+=     |bool      |bool      |bool      |29  |b1=b1||b2                   
+*     |int       |int       |int       |31  |i1*i2                       
+=     |int       |int       |int       |31  |i1=i1*i2                    
+/     |int       |int       |int       |32  |i1/i2                       
+=     |int       |int       |int       |32  |i1=i1/i2                    
+%     |int       |int       |int       |33  |i1%i2                       
+=     |int       |int       |int       |33  |i1=i1%i2                    
++     |int       |int       |int       |34  |i1+i2                       
+=     |int       |int       |int       |34  |i1=i1+i2                    
+-     |int       |int       |int       |35  |i1-i2                       
+=     |int       |int       |int       |35  |i1=i1-i2                    
+<     |int       |int       |bool      |37  |i1<i2                       
+=     |bool      |bool      |bool      |37  |b1=i1<i2                    
+>     |int       |int       |bool      |38  |i1>i2                       
+=     |bool      |bool      |bool      |38  |b1=i1>i2                    
+<=    |int       |int       |bool      |39  |i1<=i2                      
+=     |bool      |bool      |bool      |39  |b1=i1<=i2                   
+>=    |int       |int       |bool      |40  |i1>=i2                      
+=     |bool      |bool      |bool      |40  |b1=i1>=i2                   
+==    |int       |int       |bool      |42  |i1==i2                      
+=     |bool      |bool      |bool      |42  |b1=i1==i2                   
+!=    |int       |int       |bool      |43  |i1!=i2                      
+=     |bool      |bool      |bool      |43  |b1=i1!=i2                   
+==    |Obj       |Obj       |bool      |44  |o1==o2                      
+=     |bool      |bool      |bool      |44  |b1=o1==o2                   
+!=    |Obj       |Obj       |bool      |45  |o1!=o2                      
+=     |bool      |bool      |bool      |45  |b1=o1!=o2                   
+==    |nix       |Obj       |bool      |46  |nix==o2                     
+=     |bool      |bool      |bool      |46  |b1=nix==o2                  
+!=    |nix       |Obj       |bool      |47  |nix!=o2                     
+=     |bool      |bool      |bool      |47  |b1=nix!=o2                  
+==    |Obj       |nix       |bool      |48  |o1==nix                     
+=     |bool      |bool      |bool      |48  |b1=o1==nix                  
+!=    |Obj       |nix       |bool      |49  |o1!=nix                     
+=     |bool      |bool      |bool      |49  |b1=o1!=nix                  
+==    |nix       |nix       |bool      |50  |nix==nix                    
+=     |bool      |bool      |bool      |50  |b1=nix==nix                 
+!=    |nix       |nix       |bool      |51  |nix!=nix                    
+=     |bool      |bool      |bool      |51  |b1=nix!=nix                 
+&&    |int       |int       |bool      |54  |i1&&i2                      
+=     |bool      |bool      |bool      |54  |b1=i1&&i2                   
+||    |int       |int       |bool      |55  |i1||i2                      
+=     |bool      |bool      |bool      |55  |b1=i1||i2                   
+*     |bool      |bool      |int       |57  |b1*b2                       
+=     |int       |int       |int       |57  |i1=b1*b2                    
+/     |bool      |bool      |int       |58  |b1/b2                       
+=     |int       |int       |int       |58  |i1=b1/b2                    
+%     |bool      |bool      |int       |59  |b1%b2                       
+=     |int       |int       |int       |59  |i1=b1%b2                    
++     |bool      |bool      |int       |60  |b1+b2                       
+=     |int       |int       |int       |60  |i1=b1+b2                    
+-     |bool      |bool      |int       |61  |b1-b2                       
+=     |int       |int       |int       |61  |i1=b1-b2                    
+<     |bool      |bool      |bool      |63  |b1<b2                       
+=     |bool      |bool      |bool      |63  |b1=b1<b2                    
+>     |bool      |bool      |bool      |64  |b1>b2                       
+=     |bool      |bool      |bool      |64  |b1=b1>b2                    
+<=    |bool      |bool      |bool      |65  |b1<=b2                      
+=     |bool      |bool      |bool      |65  |b1=b1<=b2                   
+>=    |bool      |bool      |bool      |66  |b1>=b2                      
+=     |bool      |bool      |bool      |66  |b1=b1>=b2                   
+==    |int       |bool      |bool      |68  |i1==b2                      
+=     |bool      |bool      |bool      |68  |b1=i1==b2                   
+!=    |int       |bool      |bool      |69  |i1!=b2                      
+=     |bool      |bool      |bool      |69  |b1=i1!=b2                   
+return|int       |int       |int       |71  |return 0                    

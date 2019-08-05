@@ -1,0 +1,38 @@
+class Obj{
+}
+
+class Test1 {
+
+	private int foo(){
+
+	    int i1, i2;
+	    String s1, s2;
+	    bool b1, b2;
+	    Obj o1, o2;
+
+        b1 = s1 && s2;
+	    b1 = s1 || s2;
+
+        i1 = s1 * s2;
+        i1 = s1 / s2;
+        i1 = s1 % s2;
+        i1 = s1 + s2;
+        i1 = s1 - s2;
+
+        b1 = s1 < s2;
+        b1 = s1 > s2;
+        b1 = s1 <= s2;
+        b1 = s1 >= s2;
+
+        b1 = i1 == o1;
+        b1 = i1 != o1;
+        b1 = o1 == i2;
+        b1 = o1 != i2;
+        b1 = nix == i2;
+        b1 = nix != b2;
+        b1 = i1 == nix;
+        b1 = b1 != nix;
+
+		return 0;
+	}
+}

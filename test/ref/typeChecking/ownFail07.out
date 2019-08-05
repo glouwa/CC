@@ -1,0 +1,13 @@
+
+Number of lexical errors: 0
+
+Number of syntax errors: 0
+
+Number of type errors: 7
+  #1: Double definition of member 'String s1' class 'A' (line 4)
+  #2: Double definition of variable 'String s1' in method 'foo_s(String)' (line 11)
+  #3: Double definition of variable 'int i1' in method 'foo_s(String)' (line 13)
+  #4: Double definition of method 'foo(int)' class 'A' (line 21)
+  #5: Usage of undefined Type 'C' (line 25)
+  #6: Field 'i1' from type 'A' not visible (line 46)
+  #7: Field 's1' from type 'A' not visible (line 47)

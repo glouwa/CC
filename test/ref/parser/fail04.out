@@ -1,0 +1,16 @@
+
+Number of lexical errors: 0
+
+1: KEY_CLASS CLASS_TYPE '{'
+2: AMOD PRIMITIVE_TYPE ID '(' ')' '{'
+4: ID ASSIGN INT
+6: ID ASSIGN INT MULOP INT SIGN INT MULOP MULOP INT ';'
+8: ID ASSIGN INT SIGN SIGN INT ';'
+10: ID ASSIGN '(' INT SIGN ')' SIGN INT ';'
+12: '}'
+13: '}'
+Number of syntax errors: 4
+  #1: line 6:3 mismatched input 'c123' expecting {';', RELOP, MULOP, '&&', '||', SIGN}
+  #2: line 6:19 no viable alternative at input '/'
+  #3: line 10:12 no viable alternative at input ')'
+  #4: line 12:1 extraneous input '}' expecting {'if', 'while', 'return', ID}

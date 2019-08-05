@@ -1,0 +1,10 @@
+int main(){
+  
+  int 0123abc;
+  int _0123;
+  int 0123_;
+  String |1sb;
+  
+  int[ff]= 0;
+  return 0;
+}

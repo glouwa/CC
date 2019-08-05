@@ -1,0 +1,34 @@
+
+Number of lexical errors: 0
+
+Number of syntax errors: 0
+
+Number of type errors: 0
+
+Number of type warnings: 0
+
+--------------------------------------------------------------------------------
+ID                  |type      |scope                                      |line
+--------------------------------------------------------------------------------
+msg                 |String    |Evaluation                                 |3   
+course_number       |int       |Evaluation                                 |4   
+new_msg             |String    |Evaluation.setEvalMsg(String int)          |16  
+course_num          |int       |Evaluation.setEvalMsg(String int)          |16  
+eval                |Evaluation|Main.main()                                |27  
+ret                 |int       |Main.main()                                |28  
+
+--------------------------------------------------------------------------------
+OP    |lhs       |rhs       |result    |line|OP-string                   
+--------------------------------------------------------------------------------
+return|int       |int       |int       |8   |return print("Please dont forget to evaluate this course!\n")
+return|String    |String    |String    |13  |return msg                  
+=     |String    |String    |String    |18  |msg=new_msg                 
+=     |int       |int       |int       |19  |course_number=course_num    
+return|int       |int       |int       |20  |return 0                    
+=     |Evaluation|Evaluation|Evaluation|30  |eval=new Evaluation         
+.     |Evaluation|int       |int       |32  |eval.setEvalMsg("This course was so cool, I want to do it again next year!",716077)
+=     |int       |int       |int       |32  |ret=eval.setEvalMsg("This course was so cool, I want to do it again next year!",716077)
+.     |Evaluation|int       |int       |33  |eval.setEvalMsg("jk. Im glad its over...",716077)
+=     |int       |int       |int       |33  |ret=eval.setEvalMsg("jk. Im glad its over...",716077)
+.     |Evaluation|String    |String    |35  |eval.getMsg()               
+return|int       |int       |int       |35  |return print(eval.getMsg()) 

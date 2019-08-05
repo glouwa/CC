@@ -1,0 +1,21 @@
+class Obj {
+}
+
+class Test {
+
+	private String print(Obj s){
+        return "";
+    }
+
+	private int print(int s){
+		return 0;
+	}
+
+	private int print(String s){
+    	return 0;
+    }
+
+    private int print(bool s){
+        return 0;
+    }
+}

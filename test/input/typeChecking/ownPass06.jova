@@ -1,0 +1,46 @@
+class A {
+  public int i1;
+  public String s1;
+
+  public int foo_i()
+  {
+    return 2;
+  }
+
+  public String foo_s(String s2)
+  {
+      return "";
+  }
+}
+
+class B {
+  public A a;
+  public A getA()
+  {
+    return a;
+  }
+}
+
+
+class Main {
+  public int main()
+  {
+    B b;
+    int i;
+    String s;
+
+    i = b.a.i1;
+    s = b.a.s1;
+
+    i = b.a.foo_i();
+    s = b.a.foo_s(s);
+
+    i = print(i);
+    i = print(s);
+
+    i = print(b.a.foo_i());
+    i = print(b.a.foo_s(s));
+
+    return 1;
+  }
+}

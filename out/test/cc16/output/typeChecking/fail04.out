@@ -1,0 +1,20 @@
+
+Number of lexical errors: 0
+
+Number of syntax errors: 0
+
+Number of type errors: 14
+  #1: Invalid operand of type 'String' to binary operator '+' (line 17)
+  #2: Invalid operand of type 'String' to binary operator '-' (line 18)
+  #3: Invalid operand of type 'String' to binary operator '*' (line 19)
+  #4: Invalid operand of type 'String' to binary operator '*' (line 19)
+  #5: Invalid operand of type 'nix' to binary operator '&&' (line 20)
+  #6: Invalid operand of type 'Test1' to binary operator '<' (line 21)
+  #7: Invalid operand of type 'nix' to binary operator '<' (line 21)
+  #8: Invalid operand of type 'String' to unary operator '!' (line 37)
+  #9: Invalid operand of type 'String' to unary operator '+' (line 38)
+  #10: Invalid operand of type 'String' to unary operator '-' (line 39)
+  #11: Invalid operand of type 'nix' to unary operator '!' (line 40)
+  #12: Invalid operand of type 'Test1' to unary operator '!' (line 41)
+  #13: Incompatible type 'String' for condition (line 47)
+  #14: Incompatible type 'nix' for condition (line 51)

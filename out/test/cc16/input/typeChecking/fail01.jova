@@ -1,0 +1,29 @@
+class Test1 {
+	private int luke;
+	
+	private int test(){
+		return 0;
+	}
+}
+
+class Test2 {
+	private int obiwan;
+	
+	private bool fail(){
+		Test1 test;
+		Undefined undef;
+		
+		test = new Test1;
+		
+		obiwan = a;
+		obiwan = test.leia;
+		
+		obiwan = fight();
+		
+		obiwan = test.doesnotexist(42, "", true);
+		
+		undef = new Undefined;
+		
+		return 0;
+	}
+}

@@ -1,0 +1,21 @@
+class Main {
+	private int youshallnotpass;
+	
+	public int dummymethod(){
+		return 0;
+	}
+	
+	public int main(){
+		return 0;
+	}
+}
+
+class Ma1n {
+	
+	public int main(){
+		Main m;
+		m = new Main;
+		
+		return 0;
+	}
+}

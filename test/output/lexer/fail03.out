@@ -1,0 +1,10 @@
+
+Number of lexical errors: 3
+  #1: line 6:3 token recognition error at: '$'
+  #2: line 7:2 token recognition error at: '#'
+  #3: line 7:4 token recognition error at: '~'
+
+1: PRIMITIVE_TYPE ID '(' ')' '{'
+3: PRIMITIVE_TYPE ID ASSIGN INT ';'
+4: PRIMITIVE_TYPE ID ASSIGN LITERAL ';'
+9: '}'

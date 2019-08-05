@@ -1,0 +1,19 @@
+
+Number of lexical errors: 0
+
+1: KEY_CLASS CLASS_TYPE '{'
+2: AMOD PRIMITIVE_TYPE ID '(' PRIMITIVE_TYPE ID ',' PRIMITIVE_TYPE ID ',' PRIMITIVE_TYPE ID ',' PRIMITIVE_TYPE ID ')'
+3: '{'
+4: PRIMITIVE_TYPE ID ',' ID ',' ID ',' ID ',' ID ',' ID ';'
+5: PRIMITIVE_TYPE ID ',' ID ',' ID ';'
+7: PRIMITIVE_TYPE ID ',' ID ';'
+10: PRIMITIVE_TYPE ID ',' ID ';'
+11: KEY_RETURN INT ';'
+12: '}'
+13: '}'
+Number of syntax errors: 0
+
+CLASS Test3 (line:1)
+  METHODS:
+    public int foo(int hgfd, String bar, bool b0_az, bool blUb_) (line:2)
+ENDCLASS (line:13)

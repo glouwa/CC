@@ -1,0 +1,36 @@
+
+Number of lexical errors: 0
+
+Number of syntax errors: 0
+
+Number of type errors: 0
+
+Number of type warnings: 1
+  #1: bool coerced to int (line 38)
+
+--------------------------------------------------------------------------------
+ID                  |type      |scope                                      |line
+--------------------------------------------------------------------------------
+bool_1              |bool      |Conditions.testCond()                      |5   
+bool_2              |bool      |Conditions.testCond()                      |5   
+bool_3              |bool      |Conditions.testCond()                      |5   
+res                 |int       |Conditions.testCond()                      |6   
+cond                |Conditions|Main.main()                                |36  
+--------------------------------------------------------------------------------
+OP    |lhs       |rhs       |result    |line|OP-string                   
+--------------------------------------------------------------------------------
+=     |bool      |bool      |bool      |8   |bool_1=true                 
+=     |bool      |bool      |bool      |9   |bool_2=false                
+=     |bool      |bool      |bool      |10  |bool_3=true                 
+cond  |          |bool      |bool      |13  |bool_1                      
+&&    |bool      |bool      |bool      |15  |bool_1&&bool_3              
+cond  |          |bool      |bool      |15  |bool_1&&bool_3              
+||    |bool      |bool      |bool      |17  |bool_3||bool_2              
+cond  |          |bool      |bool      |17  |bool_3||bool_2              
+=     |bool      |bool      |bool      |19  |bool_2=true                 
+cond  |          |bool      |bool      |24  |bool_2                      
+=     |int       |int       |int       |26  |res=print("HAHAHAHAHA\n")   
+return|bool      |bool      |bool      |28  |return bool_2               
+=     |Conditions|Conditions|Conditions|37  |cond=new Conditions         
+.     |Conditions|bool      |bool      |38  |cond.testCond()             
+return|int       |bool      |int       |38  |return cond.testCond()      

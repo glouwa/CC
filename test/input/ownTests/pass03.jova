@@ -1,0 +1,25 @@
+class Student{
+    private String name;
+    public int id;
+    public bool equals(Student s){
+        bool ret;
+        if (s.id == id){
+            ret = false;
+        }
+        else {
+            ret = true;
+        }
+        return ret;
+    }
+}
+
+class Main {
+    public int main() {
+        Student s_1, s_2;
+        s_1 = new Student;
+        s_2 = new Student;
+        s_1.id = 42;
+        s_2.id = "73";
+        return print(s_1.equals(s_2));
+    }
+}

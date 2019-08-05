@@ -1,0 +1,57 @@
+class Test1{
+	
+}
+
+class Test2 {
+
+	public int binary(){
+		String a, b;
+		int result;
+		Test1 garnix;
+		
+		garnix = new Test1;
+		
+		a = "Im your father";
+		b = "Do. Or do not. There is no try.";
+		
+		result = a + 42;
+		result = 42 - b;
+		result = a * b;
+		result = 42 && nix;
+		result = garnix < nix;
+		
+		return 0;
+		
+	}
+	
+	public int unary(){
+		String a, b;
+		int result;
+		Test1 garnix;
+		
+		garnix = new Test1;
+		
+		a = "Its a trap!";
+		b = "Somebody has to save our skins.";
+		
+		result = !a;
+		result = +b;
+		result = -a;
+		result = !nix;
+		result = !garnix;
+		
+		return 0;
+	}
+	
+	public int cond() {
+	  if("")
+	  {
+	  
+	  }
+	  while(nix)
+	  {
+	  
+	  }
+	  return 0;
+	}
+}

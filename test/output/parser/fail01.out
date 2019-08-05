@@ -1,0 +1,19 @@
+
+Number of lexical errors: 0
+
+1: KEY_CLASS CLASS_TYPE '{'
+2: AMOD PRIMITIVE_TYPE ID '(' ')'
+3: '{'
+4: PRIMITIVE_TYPE ID ',' ID ',' ID ';'
+5: PRIMITIVE_TYPE ';'
+6: PRIMITIVE_TYPE ID ';'
+8: ID ASSIGN INT ';'
+9: ID ASSIGN LITERAL ';'
+10: ID INT ';'
+11: ID ASSIGN ID ';'
+13: KEY_RETURN ID ';'
+14: '}'
+15: '}'
+Number of syntax errors: 2
+  #1: line 5:9 missing ID at ';'
+  #2: line 10:5 missing '=' at '912'

@@ -1,0 +1,38 @@
+
+Number of lexical errors: 0
+
+1: KEY_CLASS CLASS_TYPE '{'
+2: AMOD CLASS_TYPE ID ';'
+4: AMOD PRIMITIVE_TYPE ID '(' CLASS_TYPE ID ')'
+5: '{'
+6: ID ASSIGN ID ';'
+7: KEY_RETURN BOOL ';'
+8: '}'
+11: AMOD PRIMITIVE_TYPE ID '(' PRIMITIVE_TYPE ID ',' PRIMITIVE_TYPE ID ')'
+12: '{'
+13: KEY_RETURN ID SIGN ID ';'
+14: '}'
+15: '}'
+18: KEY_CLASS CLASS_TYPE
+19: '{'
+20: AMOD PRIMITIVE_TYPE ID '(' ')' '{'
+21: CLASS_TYPE ID ';'
+22: PRIMITIVE_TYPE ID ';'
+24: ID ASSIGN KEY_NEW CLASS_TYPE ';'
+25: ID ASSIGN ID DOTOP ID '(' ID ')' ';'
+26: KEY_RETURN ID DOTOP ID DOTOP ID DOTOP ID DOTOP ID DOTOP ID DOTOP ID DOTOP ID ';'
+27: '}'
+28: '}'
+Number of syntax errors: 0
+
+CLASS Test5 (line:1)
+  MEMBERS:
+    public Test5 self (line:2)
+  METHODS:
+    public bool init(Test5 test) (line:4)
+    public int test5(int a, int b) (line:11)
+ENDCLASS (line:15)
+CLASS Main (line:18)
+  METHODS:
+    public int main() (line:20)
+ENDCLASS (line:28)

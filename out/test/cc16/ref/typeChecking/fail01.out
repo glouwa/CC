@@ -1,0 +1,13 @@
+
+Number of lexical errors: 0
+
+Number of syntax errors: 0
+
+Number of type errors: 7
+  #1: Usage of undefined Type 'Undefined' (line 14)
+  #2: Usage of undefined identifier 'a' (line 18)
+  #3: Test1 does not have field 'leia' (line 19)
+  #4: Call to undefined method 'fight()' (line 21)
+  #5: Cannot invoke method 'doesnotexist(int String bool)' on type 'Test1' (line 23)
+  #6: Usage of undefined Type 'Undefined' (line 25)
+  #7: Usage of undefined identifier 'undef' (line 25)

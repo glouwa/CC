@@ -1,0 +1,7 @@
+class Main {
+public int main() {
+  as_1 = 00127;
+  id = 0198;
+  return id;
+}
+}

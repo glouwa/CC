@@ -1,0 +1,34 @@
+
+Number of lexical errors: 0
+
+1: KEY_CLASS CLASS_TYPE '{'
+3: AMOD PRIMITIVE_TYPE ID ';'
+4: AMOD PRIMITIVE_TYPE ID ',' ID ';'
+5: AMOD PRIMITIVE_TYPE ID ',' ID ',' ID ';'
+7: AMOD PRIMITIVE_TYPE ID '(' ')'
+8: '{'
+9: PRIMITIVE_TYPE ID ';'
+10: CLASS_TYPE ID ';'
+11: ID ASSIGN INT SIGN ID MULOP INT SIGN ID MULOP ID MULOP INT ';'
+12: ID ASSIGN KEY_NEW CLASS_TYPE ';'
+13: ID DOTOP ID ASSIGN ID DOTOP ID SIGN ID DOTOP ID '(' ')' ';'
+14: ID DOTOP ID ASSIGN KEY_NEW CLASS_TYPE ';'
+16: KEY_RETURN INT ';'
+17: '}'
+18: '}'
+Number of syntax errors: 0
+
+CLASS Test (line:1)
+  MEMBERS:
+    private int foo (line:3)
+    private bool bar, baz (line:4)
+    public String merp, gerd, brrr (line:5)
+  METHODS:
+    public int test() (line:7)
+ENDCLASS (line:18)
+
+
+var x = 0;
+if (x)
+if (typeof x != 'undefined')
+if (x === true)

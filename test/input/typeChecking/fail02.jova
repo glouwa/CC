@@ -1,0 +1,35 @@
+class Test1 {
+	private int luke;
+	
+	private int cannotAccess(){
+		return 0;
+	}
+}
+
+class Test2 {
+	private int obiwan;
+	
+	private bool fail(int param){
+		int obiwan;
+		
+		int a;
+		int a;
+		
+		int param;
+		
+		return 0;
+	}
+	
+	private bool fail(int param){
+		
+		return 0;
+	}
+}
+
+class Test1 {
+	private int luke;
+	
+	private int cannotAccess(){
+		return 0;
+	}
+}

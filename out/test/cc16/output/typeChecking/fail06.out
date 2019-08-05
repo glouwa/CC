@@ -1,0 +1,11 @@
+
+Number of lexical errors: 0
+
+Number of syntax errors: 0
+
+Number of type errors: 5
+  #1: Cannot add member to class Main (line 2)
+  #2: Cannot add member to class Main (line 4)
+  #3: Cannot instantiate type Main (line 16)
+  #4: Cannot instantiate type Main (line 17)
+  #5: Usage of undefined identifier 'm' (line 17)

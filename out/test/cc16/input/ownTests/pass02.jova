@@ -1,0 +1,33 @@
+class DeathStar {
+
+  public int fire(Planet planet){
+     x = planet.destroyed();
+     return nix;
+  }
+
+}
+
+class Planet {
+
+  public Planet destroyed(){
+    return nix;
+  }
+
+}
+
+
+class Main{
+  public int main(){
+
+    DeathStar ds;
+    Planet alderaan;
+    ds = new DeathStar;
+    alderaan = new Planet;
+
+    x = ds.fire(alderaan);
+
+    return 0;
+  }
+
+
+}

@@ -1,0 +1,66 @@
+
+Number of lexical errors: 0
+
+Number of syntax errors: 0
+
+Number of type errors: 0
+
+Number of type warnings: 6
+  #1: int coerced to bool (line 19)
+  #2: int coerced to bool (line 20)
+  #3: int coerced to bool (line 21)
+  #4: int coerced to bool (line 22)
+  #5: int coerced to bool (line 24)
+  #6: bool coerced to int (line 36)
+
+--------------------------------------------------------------------------------
+ID                  |type      |scope                                      |line
+--------------------------------------------------------------------------------
+bool_1              |bool      |Conditions.testCond()                      |5   
+bool_2              |bool      |Conditions.testCond()                      |5   
+bool_3              |bool      |Conditions.testCond()                      |5   
+res                 |int       |Conditions.testCond()                      |6   
+cond                |Conditions|Main.main()                                |34  
+
+--------------------------------------------------------------------------------
+OP    |lhs       |rhs       |result    |line|OP-string                   
+--------------------------------------------------------------------------------
+=     |bool      |bool      |bool      |8   |bool_1=true                 
+=     |bool      |bool      |bool      |9   |bool_2=false                
+=     |bool      |bool      |bool      |10  |bool_3=true                 
+||    |bool      |bool      |bool      |13  |bool_1||bool_3              
+&&    |bool      |bool      |bool      |13  |bool_1||bool_3&&bool_2      
+cond  |          |bool      |bool      |13  |bool_1||bool_3&&bool_2      
+||    |bool      |bool      |bool      |14  |bool_1||bool_3              
+&&    |bool      |bool      |bool      |14  |bool_1||bool_3&&bool_2      
+cond  |          |bool      |bool      |14  |bool_1||bool_3&&bool_2      
+||    |bool      |bool      |bool      |15  |bool_1||bool_3              
+&&    |bool      |bool      |bool      |15  |bool_1||bool_3&&bool_2      
+!     |          |bool      |bool      |15  |!(bool_1||bool_3&&bool_2)   
+cond  |          |bool      |bool      |15  |!(bool_1||bool_3&&bool_2)   
+||    |bool      |bool      |bool      |16  |bool_1||bool_3              
+&&    |bool      |bool      |bool      |16  |bool_1||bool_3&&bool_2      
+!     |          |bool      |bool      |16  |!(bool_1||bool_3&&bool_2)   
+cond  |          |bool      |bool      |16  |!(bool_1||bool_3&&bool_2)   
+||    |bool      |bool      |bool      |19  |bool_1||bool_3              
+&&    |bool      |int       |bool      |19  |bool_1||bool_3&&res         
+cond  |          |bool      |bool      |19  |bool_1||bool_3&&res         
+||    |bool      |bool      |bool      |20  |bool_1||bool_3              
+&&    |bool      |int       |bool      |20  |bool_1||bool_3&&res         
+cond  |          |bool      |bool      |20  |bool_1||bool_3&&res         
+||    |bool      |bool      |bool      |21  |bool_1||bool_3              
+&&    |bool      |int       |bool      |21  |bool_1||bool_3&&res         
+!     |          |bool      |bool      |21  |!(bool_1||bool_3&&res)      
+cond  |          |bool      |bool      |21  |!(bool_1||bool_3&&res)      
+||    |bool      |bool      |bool      |22  |bool_1||bool_3              
+&&    |bool      |int       |bool      |22  |bool_1||bool_3&&res         
+!     |          |bool      |bool      |22  |!(bool_1||bool_3&&res)      
+cond  |          |bool      |bool      |22  |!(bool_1||bool_3&&res)      
+!     |          |int       |bool      |24  |!res                        
+cond  |          |bool      |bool      |24  |!res                        
+||    |bool      |bool      |bool      |26  |bool_3||bool_2              
+&&    |bool      |bool      |bool      |26  |bool_1&&bool_3||bool_2      
+return|bool      |bool      |bool      |26  |return bool_1&&bool_3||bool_2
+=     |Conditions|Conditions|Conditions|35  |cond=new Conditions         
+.     |Conditions|bool      |bool      |36  |cond.testCond()             
+return|int       |bool      |int       |36  |return cond.testCond()      

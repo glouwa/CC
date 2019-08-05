@@ -1,0 +1,26 @@
+
+Number of lexical errors: 0
+
+1: KEY_CLASS CLASS_TYPE '{'
+5: AMOD PRIMITIVE_TYPE ID '(' ID RELOP INT ID ')'
+6: '{'
+7: ID '(' ';' ID RELOP INT ';' ID ASSIGN INT ')' '{'
+8: ID ASSIGN ID SIGN INT ';'
+9: '}'
+11: KEY_WHILE '(' ID ASSIGN INT ';' ';' ID ASSIGN INT ')' '{'
+12: ID ASSIGN ID SIGN INT ';'
+13: '}'
+15: KEY_WHILE '(' ID ASSIGN INT ';' ID RELOP INT ';' ')' '{'
+16: ID ASSIGN ID SIGN INT ';'
+17: '}'
+18: '}'
+19: '}'
+Number of syntax errors: 8
+  #1: line 5:17 mismatched input 'i' expecting ')'
+  #2: line 7:10 missing '=' at '('
+  #3: line 7:11 no viable alternative at input ';'
+  #4: line 7:15 mismatched input '<' expecting '='
+  #5: line 7:25 mismatched input ')' expecting {';', RELOP, MULOP, '&&', '||', SIGN}
+  #6: line 9:3 extraneous input '}' expecting {'if', 'while', 'return', ID}
+  #7: line 11:3 extraneous input 'while' expecting {'}', AMOD}
+  #8: line 15:3 extraneous input 'while' expecting {<EOF>, 'class'}

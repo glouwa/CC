@@ -1,0 +1,47 @@
+
+Number of lexical errors: 0
+
+Number of syntax errors: 0
+
+Number of type errors: 0
+
+Number of type warnings: 0
+
+--------------------------------------------------------------------------------
+ID                  |type      |scope                                      |line
+--------------------------------------------------------------------------------
+i1                  |int       |A                                          |2   
+s1                  |String    |A                                          |3   
+s2                  |String    |A.foo_s(String)                            |10  
+a                   |A         |B                                          |17  
+b                   |B         |Main.main()                                |28  
+i                   |int       |Main.main()                                |29  
+s                   |String    |Main.main()                                |30  
+
+--------------------------------------------------------------------------------
+OP    |lhs       |rhs       |result    |line|OP-string                   
+--------------------------------------------------------------------------------
+return|int       |int       |int       |7   |return 2                    
+return|String    |String    |String    |12  |return ""                   
+return|A         |A         |A         |20  |return a                    
+.     |B         |A         |A         |32  |b.a                         
+.     |A         |int       |int       |32  |b.a.i1                      
+=     |int       |int       |int       |32  |i=b.a.i1                    
+.     |B         |A         |A         |33  |b.a                         
+.     |A         |String    |String    |33  |b.a.s1                      
+=     |String    |String    |String    |33  |s=b.a.s1                    
+.     |B         |A         |A         |35  |b.a                         
+.     |A         |int       |int       |35  |b.a.foo_i()                 
+=     |int       |int       |int       |35  |i=b.a.foo_i()               
+.     |B         |A         |A         |36  |b.a                         
+.     |A         |String    |String    |36  |b.a.foo_s(s)                
+=     |String    |String    |String    |36  |s=b.a.foo_s(s)              
+=     |int       |int       |int       |38  |i=print(i)                  
+=     |int       |int       |int       |39  |i=print(s)                  
+.     |B         |A         |A         |41  |b.a                         
+.     |A         |int       |int       |41  |b.a.foo_i()                 
+=     |int       |int       |int       |41  |i=print(b.a.foo_i())        
+.     |B         |A         |A         |42  |b.a                         
+.     |A         |String    |String    |42  |b.a.foo_s(s)                
+=     |int       |int       |int       |42  |i=print(b.a.foo_s(s))       
+return|int       |int       |int       |44  |return 1                    

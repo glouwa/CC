@@ -1,0 +1,24 @@
+
+Number of lexical errors: 0
+
+Number of syntax errors: 0
+
+Number of type errors: 0
+
+Number of type warnings: 0
+
+--------------------------------------------------------------------------------
+ID                  |type      |scope                                      |line
+--------------------------------------------------------------------------------
+foo                 |int       |Nested.nestedIsland()                      |9   
+--------------------------------------------------------------------------------
+OP    |lhs       |rhs       |result    |line|OP-string                   
+--------------------------------------------------------------------------------
+return|int       |int       |int       |4   |return 42                   
+*     |int       |int       |int       |11  |8*15                        
+-     |int       |int       |int       |11  |16-23                       
+*     |int       |int       |int       |11  |8*15*(16-23)                
+/     |int       |int       |int       |11  |8*15*(16-23)/fortyTwo()     
++     |int       |int       |int       |11  |4+8*15*(16-23)/fortyTwo()   
+=     |int       |int       |int       |11  |foo=4+8*15*(16-23)/fortyTwo()
+return|int       |int       |int       |13  |return 0                    

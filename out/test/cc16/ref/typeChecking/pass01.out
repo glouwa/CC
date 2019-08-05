@@ -1,0 +1,32 @@
+
+Number of lexical errors: 0
+
+Number of syntax errors: 0
+
+Number of type errors: 0
+
+Number of type warnings: 1
+  #1: bool coerced to int (line 29)
+
+--------------------------------------------------------------------------------
+ID                  |type      |scope                                      |line
+--------------------------------------------------------------------------------
+mermaid_man         |int       |MMMGirdle                                  |2   
+barnacle_boy        |int       |MMMGirdle                                  |2   
+sentence            |String    |MMMGirdle                                  |3   
+wumbo               |bool      |MMMGirdle.magnify(bool)                    |5   
+result              |bool      |MMMGirdle.magnify(bool)                    |7   
+girdle              |MMMGirdle |Main.main()                                |24  
+ret                 |int       |Main.main()                                |25  
+--------------------------------------------------------------------------------
+OP    |lhs       |rhs       |result    |line|OP-string                   
+--------------------------------------------------------------------------------
+cond  |          |bool      |bool      |9   |wumbo                       
+=     |bool      |bool      |bool      |11  |result=true                 
+=     |bool      |bool      |bool      |14  |result=false                
+return|bool      |bool      |bool      |16  |return result               
+=     |MMMGirdle |MMMGirdle |MMMGirdle |27  |girdle=new MMMGirdle        
+.     |MMMGirdle |String    |String    |28  |girdle.sentence             
+=     |String    |String    |String    |28  |girdle.sentence="...set it to W for WUMBO!\n"
+.     |MMMGirdle |bool      |bool      |29  |girdle.magnify(true)        
+return|int       |bool      |int       |29  |return girdle.magnify(true) 

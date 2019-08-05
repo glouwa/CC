@@ -1,0 +1,18 @@
+
+Number of lexical errors: 0
+
+1: KEY_CLASS CLASS_TYPE
+2: '{'
+7: '}'
+10: KEY_CLASS CLASS_TYPE
+11: '{'
+12: AMOD PRIMITIVE_TYPE ID ';'
+14: '}'
+Number of syntax errors: 0
+
+CLASS DontCry (line:1)
+ENDCLASS (line:7)
+CLASS Cry (line:10)
+  MEMBERS:
+    private int num_tears (line:12)
+ENDCLASS (line:14)

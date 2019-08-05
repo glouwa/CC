@@ -1,0 +1,56 @@
+class A {
+  private int i1;
+  private String s1;
+  public String s1;
+
+  public int foo_i()
+  {
+    return 2;
+  }
+
+  public String foo_s(String s1)
+  {
+      int i1;
+      return "";
+  }
+
+  public int foo(int a) {
+      return 0;
+  }
+
+  public String foo(int a) {
+      return 0;
+  }
+
+  public C undefRet(int a) {
+        return 0;
+    }
+}
+
+class B {
+  public A a;
+  public A getA()
+  {
+    return a;
+  }
+}
+
+
+class Main {
+  public int main()
+  {
+    B b;
+    int i;
+    String s;
+
+    i = b.a.i1;
+    s = b.a.s1;
+
+    i = b.a.foo_i();
+    s = b.a.foo_s(s);
+
+    i= b.a.foo(2);
+
+    return 1;
+  }
+}

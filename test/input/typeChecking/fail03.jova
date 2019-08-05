@@ -1,0 +1,21 @@
+class Test1 {
+	private int luke;
+	
+	private int cannotAccess(){
+		return 0;
+	}
+}
+
+class Test2 {
+	private int obiwan;
+	
+	private bool fail(){
+		Test1 test;
+		test = new Test1;
+		
+		obiwan = test.luke;
+		obiwan = test.cannotAccess();
+		
+		return 0;
+	}
+}

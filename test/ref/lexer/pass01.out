@@ -1,0 +1,9 @@
+
+Number of lexical errors: 0
+
+1: PRIMITIVE_TYPE ID ';'
+2: PRIMITIVE_TYPE ID ';'
+3: PRIMITIVE_TYPE ID ';'
+4: PRIMITIVE_TYPE ID ',' ID ',' ID ',' ID ';'
+5: PRIMITIVE_TYPE ID ',' ID ';'
+6: PRIMITIVE_TYPE ID ',' ID ',' ID ';'

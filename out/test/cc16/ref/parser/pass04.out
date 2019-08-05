@@ -1,0 +1,25 @@
+
+Number of lexical errors: 0
+
+1: KEY_CLASS CLASS_TYPE '{'
+2: AMOD PRIMITIVE_TYPE ID '(' PRIMITIVE_TYPE ID ',' PRIMITIVE_TYPE ID ')' '{'
+3: PRIMITIVE_TYPE ID ';'
+5: KEY_IF '(' ID RELOP INT ')' '{'
+6: ID ASSIGN ID ';'
+7: '}' KEY_ELSE '{'
+8: ID ASSIGN ID '(' ID ',' ID MULOP ID ')' ';'
+9: '}'
+10: KEY_RETURN ID ';'
+11: '}'
+13: AMOD PRIMITIVE_TYPE ID '(' ')' '{'
+15: PRIMITIVE_TYPE ID ',' ID ',' ID ';'
+16: KEY_RETURN ID '(' LITERAL ',' ID '(' ID ',' ID ')' ')' ';'
+17: '}'
+18: '}'
+Number of syntax errors: 0
+
+CLASS Test4 (line:1)
+  METHODS:
+    public int gcd(int a, int b) (line:2)
+    public int test() (line:13)
+ENDCLASS (line:18)

@@ -1,0 +1,6 @@
+class Main{
+  class Inner{}
+  public int main(){
+
+  }
+}

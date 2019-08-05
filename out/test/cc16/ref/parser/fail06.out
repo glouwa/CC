@@ -1,0 +1,30 @@
+
+Number of lexical errors: 0
+
+1: KEY_CLASS CLASS_TYPE
+2: '{'
+3: PRIMITIVE_TYPE ID ',' ID ',' ID ',' ID ',' ID ';'
+5: AMOD PRIMITIVE_TYPE ID '(' ')'
+6: '{'
+7: KEY_RETURN ID ';'
+8: '}'
+10: KEY_CLASS CLASS_TYPE '{'
+11: AMOD PRIMITIVE_TYPE ID '(' ')'
+12: '{'
+13: KEY_WHILE '(' ')'
+14: '{'
+15: ID ASSIGN INT ';'
+16: '}'
+18: KEY_WHILE '(' KEY_WHILE '(' ')' ')'
+19: ID ASSIGN INT ';'
+21: KEY_WHILE '(' ID '(' LITERAL ',' ID ')' ')'
+23: KEY_RETURN ID ';'
+24: '}'
+25: '}'
+Number of syntax errors: 6
+  #1: line 3:3 mismatched input 'int' expecting {'}', AMOD}
+  #2: line 13:9 no viable alternative at input ')'
+  #3: line 18:9 no viable alternative at input 'while'
+  #4: line 18:15 no viable alternative at input ')'
+  #5: line 18:16 mismatched input ')' expecting '{'
+  #6: line 23:3 mismatched input 'return' expecting '{'

@@ -1,0 +1,13 @@
+class Simple {
+    public int simple() {
+      return print("Ultra hard simplified ..\n")
+    }
+}
+
+class Main {
+  pubic int main() {
+    Simple simple;
+    simple = new Simple;
+    return simple.simple();
+    }
+}

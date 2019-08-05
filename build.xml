@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- v01.03.2016 -->
+<project name="Compilerbau" basedir="." default="compile">
+    <property name="lib.dir" value="lib" />
+    <property name="src.dir" value="src" />
+    <property name="junit.dir" value="test" />
+    <property name="bin.dir" value="bin" />
+
+    <property name="out.dir" value="${junit.dir}/output" />
+    <property name="task1a.dir" value="${out.dir}/lexer" />
+    <property name="task1b.dir" value="${out.dir}/parser" />
+    <property name="task2.dir" value="${out.dir}/typeChecking" />
+    <property name="task3.dir" value="${out.dir}/bytecode" />
+
+    <property name="analyzer.dir" value="antlr/gen" />
+    <property name="antlr.dir" value="antlr" />
+    <property name="grammar" value="Jova" />
+    <property name="grammar.file" value="${grammar}.g4" />
+    <property name="package" value="at/tugraz/ist/cc"/>
+
+    <property name="jar.file" value="${ant.project.name}.jar"/>
+    <property name="main-class" value="at.tugraz.ist.cc.Main"/>
+
+    <!-- ANT task declarations -->
+    <property name="ant-contrib.lib" location="${lib.dir}/ant-contrib-1.0b3.jar" />
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties" classpath="${ant-contrib.lib}" />
+
+    <path id="classpath">
+        <pathelement location="${lib.dir}/junit-4.12.jar" />
+        <pathelement location="${lib.dir}/antlr-4.5-complete.jar" />
+        <pathelement location="${lib.dir}/jasmin.jar" /> 
+        <pathelement location="${bin.dir}"/>
+    </path>
+
+    <target name="help">
+        <echo>Type 'ant -p' to get a list and description of all targets</echo>
+    </target>
+
+    <target name="init">
+        <mkdir dir="${bin.dir}" />
+        <mkdir dir="${out.dir}" />
+        <mkdir dir="${task1a.dir}" />
+        <mkdir dir="${task1b.dir}" />
+        <mkdir dir="${task2.dir}" />
+        <mkdir dir="${task3.dir}" />
+        <mkdir dir="${src.dir}/${package}/${analyzer.dir}" />
+    </target>
+
+    <target name="compile-grammar-file" description="Generates the lexer and parser for the given grammar">
+       <java classname="org.antlr.v4.Tool">
+            <arg value="-o" />
+            <arg value="${src.dir}/${package}/${analyzer.dir}" />
+       	    <arg value="-visitor"/>
+            <arg value="${grammar.file}" />
+            <classpath refid="classpath" />
+       </java>
+    </target>
+
+    <target name="compile" description="Compiles the grammar file to Java files and compiles all Java files from src" depends="init, compile-grammar-file">
+        <javac debug="false" srcdir="${src.dir}" destdir="${bin.dir}" includeantruntime="false" classpathref="classpath"/>
+    </target>
+	
+    <target name="compile-junit" description="Compiles the Junit files" depends="init, compile">
+        <javac debug="false" srcdir="${junit.dir}" destdir="${bin.dir}" includeantruntime="false" classpathref="classpath"/>
+    </target>
+
+    <target name="run-junit" description="Runs all JUnit tests and creates an xml file in the output folder" depends="init, compile, compile-junit">
+        <junit>
+            <formatter type="xml"/>
+            <classpath refid="classpath" />
+            <batchtest fork="yes" todir="${out.dir}">
+                <fileset dir="${bin.dir}">
+                    <include name="**/*Test.class"/>
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+
+    <!-- USAGE: e.g. ant print-tree -Din=test/input/bytecode/file.jova -->
+    <target name="print-tree" description="Outputs the tree of a given *.jova file according to the grammar" depends="compile-grammar-file">
+        <java classname="org.antlr.v4.runtime.misc.TestRig" fork="yes">
+            <arg value="at.tugraz.ist.cc.antlr.gen.Jova"/>
+            <arg value="program"/>
+            <arg value="${in}"/>
+            <arg value="-gui"/>
+            <classpath refid="classpath"/>
+        </java>
+        <echo message="USAGE: ant print-tree -Din=*path/inputfile.jova*" level="error" />
+    </target>
+	
+	<!-- USAGE: e.g. ant save-tree -Din=test/input/bytecode/file.jova -Dout=test/output/bytecode/file.ps-->
+    <target name="save-tree" description="Saves the tree of a given *.jova file according to the grammar as .ps file" depends="compile-grammar-file">
+        <java classname="org.antlr.v4.runtime.misc.TestRig" fork="yes">
+            <arg value="at.tugraz.ist.cc.antlr.gen.Jova"/>
+            <arg value="program"/>
+            <arg value="${in}"/>
+            <arg value="-ps"/>
+            <arg value="${out}"/>
+            <classpath refid="classpath"/>
+        </java>
+        <echo message="USAGE: ant print-tree -Din=*path/inputfile.jova* -Dout=*path/outputfile.ps*" level="error" />
+    </target>
+
+    <target name="generate-jar" description="Generates a runnable JAR-file" depends="compile">
+        <mkdir dir="${bin.dir}/${lib.dir}"/>
+        <copy todir="${bin.dir}/${lib.dir}" flatten="true">
+            <path refid="classpath"/>
+        </copy>
+        <manifestclasspath property="manifest.classpath" jarfile="${jar.file}">
+            <classpath refid="classpath"/>
+        </manifestclasspath>
+        <jar destfile="${jar.file}" basedir="${bin.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main-class}"/>
+                <attribute name="Class-Path" value="${manifest.classpath}"/>
+            </manifest>
+        </jar>
+        <delete dir="${bin.dir}/${lib.dir}" />
+    </target>
+
+    <target name="clean" description="Deletes the automatically created folders">
+        <delete dir="${bin.dir}" />
+        <delete dir="${out.dir}" />
+        <delete dir="${src.dir}/${package}/${antlr.dir}" />
+        <delete file="${jar.file}" />
+    </target>
+
+    <target name="jasmin-helper">
+        <echo>${file}</echo>
+        <dirname property="jasmin-out.dir" file="${file}"/>
+        <java jar="${lib.dir}/jasmin.jar" fork="yes">
+            <arg value="${file}"/>
+            <arg value="-d"/>
+            <arg value="${jasmin-out.dir}"/>
+        </java>
+    </target>
+
+    <target name="jasmin-all" description="Converts all *.j files in the output/bytecode into *.class Java bytecode files">
+        <foreach param="file" target="jasmin-helper">
+            <path>
+                <fileset dir="${task3.dir}" includes="**/*.j"/>
+            </path>
+        </foreach>
+    </target>
+
+    <target name="jasmin" description="Converts a Jasmin *.j file into *.class Java bytecode">
+        <java jar="${lib.dir}/jasmin.jar" fork="yes">
+            <arg value="${path}/${class}.j"/>
+            <arg value="-d"/>
+            <arg value="${path}"/>
+        </java>
+        <echo message="USAGE: ant jasmin -Dpath=*path-to-input-file* -Dclass=*classname*" level="error" />
+    </target>
+
+    <!-- USAGE: ant run-generated-java-files -Dclass=gcd -Dpath=test/testData/bytecode/ -->
+    <target name="run-jova" description="Runs the compiled files on the Java JVM" depends="jasmin">
+        <java classname="${class}" fork="yes" classpath="${path}">
+        </java>
+        <echo message="USAGE: ant run-jova -Dpath=*path-to-input-file* -Dclass=*classname*" level="error" />
+    </target>
+	
+    <target name="run" description="Runs your compiler" depends="compile">
+        <java classname="${main-class}" fork="yes" classpathref="classpath">
+            <arg value="${task}"/>
+            <arg value="${file}"/>
+            <arg value="${debug}"/>
+        </java>
+        <echo message="USAGE: ant run -Dtask=*lexer|parser|typechecker|bytecode* -Dfile=*path-to-input-file* -Ddebug=*true|false*" level="error" />
+    </target>
+
+</project>

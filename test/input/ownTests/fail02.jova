@@ -1,0 +1,6 @@
+class Main{
+  public int main(){
+    x.call(3*4)
+    return i;
+  }
+}

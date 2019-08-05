@@ -1,0 +1,11 @@
+
+Number of lexical errors: 0
+
+Number of syntax errors: 0
+
+Number of type errors: 5
+  #1: Double definition of variable 'int obiwan' in method 'fail(int)' (line 13)
+  #2: Double definition of variable 'int a' in method 'fail(int)' (line 16)
+  #3: Double definition of variable 'int param' in method 'fail(int)' (line 18)
+  #4: Double definition of method 'fail(int)' class 'Test2' (line 23)
+  #5: Double definition of class 'Test1' (line 29)

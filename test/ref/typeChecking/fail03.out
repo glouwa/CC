@@ -1,0 +1,8 @@
+
+Number of lexical errors: 0
+
+Number of syntax errors: 0
+
+Number of type errors: 2
+  #1: Field 'luke' from type 'Test1' not visible (line 16)
+  #2: Method 'cannotAccess()' from type 'Test1' not visible (line 17)

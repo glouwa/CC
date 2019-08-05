@@ -1,0 +1,43 @@
+
+Number of lexical errors: 0
+
+Number of syntax errors: 0
+
+Number of type errors: 0
+
+Number of type warnings: 8
+  #1: int coerced to bool (line 14)
+  #2: int coerced to bool (line 14)
+  #3: bool coerced to int (line 14)
+  #4: bool coerced to int (line 16)
+  #5: bool coerced to int (line 16)
+  #6: int coerced to bool (line 16)
+  #7: int coerced to bool (line 18)
+  #8: bool coerced to int (line 27)
+
+--------------------------------------------------------------------------------
+ID                  |type      |scope                                      |line
+--------------------------------------------------------------------------------
+foo                 |int       |Coercions.testCoercions(int bool int)      |3   
+bar                 |bool      |Coercions.testCoercions(int bool int)      |3   
+baz                 |int       |Coercions.testCoercions(int bool int)      |3   
+foobar              |int       |Coercions.testCoercions(int bool int)      |5   
+foobaz              |int       |Coercions.testCoercions(int bool int)      |5   
+barz                |bool      |Coercions.testCoercions(int bool int)      |6   
+braz                |bool      |Coercions.testCoercions(int bool int)      |6   
+c                   |Coercions |Main.main()                                |25  
+--------------------------------------------------------------------------------
+OP    |lhs       |rhs       |result    |line|OP-string                   
+--------------------------------------------------------------------------------
+=     |int       |int       |int       |8   |foobar=42                   
+=     |int       |int       |int       |9   |foobaz=24                   
+=     |bool      |bool      |bool      |11  |barz=true                   
+=     |bool      |bool      |bool      |12  |braz=false                  
+||    |int       |int       |bool      |14  |foo||baz                    
+=     |int       |bool      |int       |14  |foobar=foo||baz             
++     |bool      |bool      |int       |16  |bar+barz                    
+=     |bool      |int       |bool      |16  |braz=bar+barz               
+return|bool      |int       |bool      |18  |return 42                   
+=     |Coercions |Coercions |Coercions |26  |c=new Coercions             
+.     |Coercions |bool      |bool      |27  |c.testCoercions(42,false,24)
+return|int       |bool      |int       |27  |return c.testCoercions(42,false,24)

@@ -1,0 +1,16 @@
+
+Number of lexical errors: 0
+
+1: PRIMITIVE_TYPE ID '(' PRIMITIVE_TYPE ID ',' PRIMITIVE_TYPE ID ')' '{'
+2: PRIMITIVE_TYPE ID ';'
+4: KEY_IF '(' ID RELOP INT ')' '{'
+5: ID ASSIGN ID ';'
+6: '}' KEY_ELSE '{'
+7: ID ASSIGN ID '(' ID ',' ID MULOP ID ')' ';'
+8: '}'
+9: KEY_RETURN ID ';'
+10: '}'
+12: PRIMITIVE_TYPE ID '(' ')' '{'
+14: PRIMITIVE_TYPE ID ',' ID ',' ID ';'
+15: KEY_RETURN ID '(' LITERAL ',' ID '(' ID ',' ID ')' ')' ';'
+16: '}'

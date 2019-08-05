@@ -1,0 +1,41 @@
+class Conditions {
+
+  public bool testCond()
+  {
+    bool bool_1, bool_2, bool_3;
+    int res;
+    
+    bool_1 = true;
+    bool_2 = false;
+    bool_3 = true;
+    
+    
+    if(bool_1)
+    {
+      if(bool_1 && bool_3)
+      {
+        if(bool_3 || bool_2)
+        {
+          bool_2 = true;
+        }
+      }
+    } 
+    
+    while(bool_2)
+    {
+      res = print("HAHAHAHAHA\n");
+    }
+    return bool_2;
+  }
+}
+
+
+class Main {
+  public int main()
+  {
+    Conditions cond;
+    cond = new Conditions;
+    return cond.testCond();
+  }
+
+}

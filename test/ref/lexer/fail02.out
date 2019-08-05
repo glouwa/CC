@@ -1,0 +1,16 @@
+
+Number of lexical errors: 5
+  #1: line 4:7 token recognition error at: '_'
+  #2: line 5:11 token recognition error at: '_'
+  #3: line 6:10 token recognition error at: '|1'
+  #4: line 8:6 token recognition error at: '['
+  #5: line 8:9 token recognition error at: ']'
+
+1: PRIMITIVE_TYPE ID '(' ')' '{'
+3: PRIMITIVE_TYPE INT INT ID ';'
+4: PRIMITIVE_TYPE INT INT ';'
+5: PRIMITIVE_TYPE INT INT ';'
+6: PRIMITIVE_TYPE ID ';'
+8: PRIMITIVE_TYPE ID ASSIGN INT ';'
+9: KEY_RETURN INT ';'
+10: '}'

@@ -1,0 +1,19 @@
+
+Number of lexical errors: 0
+
+1: KEY_CLASS CLASS_TYPE '{'
+2: AMOD PRIMITIVE_TYPE ID '(' ')' '{'
+4: ID ASSIGN INT RELOP INT ';'
+5: ID ASSIGN INT RELOP INT ';'
+6: ID ASSIGN ID RELOP INT ';'
+7: ID ASSIGN INT RELOP INT ';'
+8: ID ASSIGN INT RELOP ID ';'
+10: KEY_RETURN INT ';'
+11: '}'
+12: '}'
+Number of syntax errors: 0
+
+CLASS Test2 (line:1)
+  METHODS:
+    public int test2() (line:2)
+ENDCLASS (line:12)
